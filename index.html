@@ -1,37 +1,427 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Site Festival</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/vendor/timetablejs.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/vendor/timetable.js" async defer></script>
-    <script src="js/app.js" async defer></script>
-  </head>
-  <body>
-    <div id="jours">
-      <ul>
-        <!-- La classe définissant le jour doit toujours être en deuxième position -->
-        <li class="filter vendredi active">Vendredi</li>
-        <li class="filter samedi">Samedi</li>
-        <li class="filter dimanche">Dimanche</li>
-      </ul>
-    </div>
-    <div id="timetable" class="timetable"></div>
+<!doctype html>
+<html lang="en">
 
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-  </body>
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="festi.css">
+	<link rel="JavaScript" href="festi.js">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+
+	<!-- MENU BURGER -->
+	<div class="header">
+
+		<div class="title">
+			<a href="index.html"> <img src="img/festineuch.png" alt="Festineuch-logo" class="center"> </a>
+		</div>
+
+
+	</div>
+	<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+	<label for="openSidebarMenu" class="sidebarIconToggle">
+		<div class="spinner diagonal part-1"></div>
+		<div class="spinner horizontal"></div>
+		<div class="spinner diagonal part-2"></div>
+	</label>
+	<div id="sidebarMenu">
+		<ul class="sidebarMenuInner">
+			<li><a href="ticket.html">Billetterie</a></li>
+			<li><a href="#!">Accessibilité</a></li>
+			<li><a href="#!">Camping et hôtel</a></li>
+			<li><a href="#!">Venir en famille</a></li>
+			<li><a href="#!">Sur place de a à Z</a></li>
+			<li><a href="#!">En VIP</a></li>
+		</ul>
+	</div>
+	<!-- MENU BURGER -->
+
+
+
+
+
+
+	<div class="entry">
+		<!-- only for more space -->
+	</div>
+
+	<div class="grid-container">
+
+		<div class="day">Jeudi 10</div>
+		<div class="artistoff">
+			<p id="dd">–j– <span id="hh">14h</span> –j–</p>
+
+			<h6>
+				<p>brayan booz</p>
+			</h6>
+			<h6>
+				<p>ander bock</p>
+			</h6>
+		</div>
+		<div class="artistoff">
+			<p id="dd">–j– <span id="hh">15h</span> –j–</p>
+			<h6>
+				<p>rivers & robots</p>
+			</h6>
+			<h6>
+				<p>rend collective</p>
+			</h6>
+		</div>
+		<div class="artistoff">
+			<p id="dd">–j– <span id="hh">16h</span> –j–</p>
+			<h6>
+				<p>isla vista</p>
+			</h6>
+			<h6>
+				<p>manou bolomik</p>
+			</h6>
+			<h6>
+				<p>zauntee</p>
+			</h6>
+		</div>
+		<div class="artist">
+			<p id="dd">–j– <span id="hh">17h</span> –j–</p>
+			<h1>
+				<p>kb</p>
+			</h1>
+			<h2>
+				<p>skillet</p>
+			</h2>
+			<h3>
+				<p>eleni baker</p>
+			</h3>
+			<h4>
+				<p>jaisua</p>
+			</h4>
+		</div>
+		<div class="artist">
+			<p id="dd">–j– <span id="hh">18h</span> –j–</p>
+			<h3>
+				<p>whatuprg</p>
+			</h3>
+			<h4>
+				<p>chris howland</p>
+			</h4>
+		</div>
+
+
+		<div class="day">Vendredi 11</div>
+		<div class="artist">
+			<p id="dd">–v– <span id="hh">14h</span> –v–</p>
+			<h1>
+				<p>rivers & robots</p>
+			</h1>
+			<h3>
+				<p>rend collective</p>
+			</h3>
+			<h5>
+				<p>wande</p>
+			</h5>
+		</div>
+		<div class="artist">
+			<p id="dd">–v– <span id="hh">15h</span> –v–</p>
+			<h1>
+				<p>kamban</p>
+			</h1>
+			<h2>
+				<p>manou bolomik</p>
+			</h2>
+			<h3>
+				<p>v rose</p>
+			</h3>
+			<h4>
+				<p>tedashii</p>
+			</h4>
+		</div>
+		<div class="artist">
+			<p id="dd">–v– <span id="hh">16h</span> –v–</p>
+			<h1>
+				<p>cass</p>
+			</h1>
+			<h2>
+				<p>tedashii</p>
+			</h2>
+		</div>
+		<div class="artist">
+			<p id="dd">–v– <span id="hh">17h</span> –v–</p>
+			<h1>
+				<p>cass</p>
+			</h1>
+			<h3>
+				<p>lecrae</p>
+			</h3>
+			<h4>
+				<p>owl city</p>
+			</h4>
+			<h5>
+				<p>da't.r.u.t.h</p>
+			</h5>
+		</div>
+		<div class="artist">
+			<p id="dd">–v– <span id="hh">18h</span> –v–</p>
+			<h1>
+				<p>trip lee</p>
+			</h1>
+			<h2>
+				<p>licy bee</p>
+			</h2>
+			<h4>
+				<p>allie paige</p>
+			</h4>
+			<h5>
+				<p>nf</p>
+			</h5>
+		</div>
+
+
+
+
+		<div class="day">Samedi 12</div>
+		<div class="artist">
+			<p id="dd">–s– <span id="hh">14h</span> –s–</p>
+			<h2>
+				<p>isla vista</p>
+			</h2>
+			<h3>
+				<p>simon kholskiy</p>
+			</h3>
+			<h4>
+				<p>kb</p>
+			</h4>
+		</div>
+		<div class="artist">
+			<p id="dd">–s– <span id="hh">15h</span> –s–</p>
+			<h3>
+				<p>pentokrator</p>
+			</h3>
+			<h4>
+				<p>skillet</p>
+			</h4>
+			<h5>
+				<p>mack brock</p>
+			</h5>
+		</div>
+		<div class="artist">
+			<p id="dd">–s– <span id="hh">16h</span> –s–</p>
+			<h1>
+				<p>kamban</p>
+			</h1>
+			<h2>
+				<p>crossfya</p>
+			</h2>
+			<h3>
+				<p>früd</p>
+			</h3>
+			<h5>
+				<p>lecrae</p>
+			</h5>
+		</div>
+		<div class="artist">
+			<p id="dd">–s– <span id="hh">17h</span> –s–</p>
+			<h1>
+				<p>rivers & robots</p>
+				</h2>
+				<h3>
+					<p>v rose</p>
+				</h3>
+				<h4>
+					<p>rend collective</p>
+				</h4>
+				<h5>
+					<p>eleni baker</p>
+				</h5>
+		</div>
+		<div class="artist">
+			<p id="dd">–s– <span id="hh">18h</span> –s–</p>
+			<h3>
+				<p>isla vista</p>
+			</h3>
+			<h4>
+				<p>allie paige</p>
+			</h4>
+		</div>
+
+
+
+
+
+		<div class="day">Dimanche 13</div>
+
+		<div class="artist">
+			<p id="dd">–d– <span id="hh">14h</span> –d–</p>
+			<h2>
+				<p>whatuprg</p>
+			</h2>
+			<h3>
+				<p>früd</p>
+			</h3>
+			<h5>
+				<p>cass</p>
+			</h5>
+		</div>
+		<div class="artist">
+			<p id="dd">–d– <span id="hh">15h</span> –d–</p>
+
+			<h4>
+				<p>licy bee</p>
+			</h4>
+			<h5>
+				<p>jaisua</p>
+			</h5>
+		</div>
+		<div class="artist">
+			<p id="dd">–d– <span id="hh">16h</span> –d–</p>
+
+			<h2>
+				<p>rivers & robots</p>
+			</h2>
+			<h3>
+				<p>rend collective</p>
+			</h3>
+			<h4>
+				<p>kb</p>
+			</h4>
+		</div>
+		<div class="artist">
+			<p id="dd">–d– <span id="hh">17h</span> –d–</p>
+
+			<h1>
+				<p>isla vista</p>
+			</h1>
+			<h3>
+				<p>skillet</p>
+			</h3>
+			<h4>
+				<p>kb</p>
+			</h4>
+			<h5>
+				<p>brayan booz</p>
+			</h5>
+		</div>
+		<!--Dimanche 13 / 18h-->
+		<div class="artist">
+			<p id="dd">–d– <span id="hh">18h</span> –d–</p>
+
+			<h1>
+				<p>kb</p>
+			</h1>
+			<h2>
+				<p>skillet</p>
+			</h2>
+			<h3>
+				<p>isla vista</p>
+			</h3>
+			<h5>
+				<p>v rose</p>
+			</h5>
+		</div>
+	</div>
+	<div class="bck-map">
+		<img src="img/map.png" alt="plan" class="map center">
+	</div>
+
+
+
+</body>
+
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
+	<!-- Grid container -->
+	<div class="container p-4">
+		<!--Grid row-->
+		<div class="row">
+			<!--Grid column-->
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<p class="text-uppercase mb-0">Rubriques</p>
+
+				<ul class="list-unstyled">
+					<li>
+						<a href="#!" class="text-dark">infos pratiques</a>
+					</li>
+					<li>
+						<a href="#!" class="text-dark">#tellement</a>
+					</li>
+					<a href="#!" class="text-dark">le festival</p>
+						<li>
+							<a href="#!" class="text-dark">condition générales</a>
+						</li>
+				</ul>
+			</div>
+			<!--Grid column-->
+
+			<!--Grid column-->
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<p class="text-uppercase">Réseaux sociaux</p>
+
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="https://www.facebook.com/festineuch" class="text-dark">Facebook</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/festineuch" class="text-dark">Twitter</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/user/festineuch" class="text-dark">YouTube</a>
+					</li>
+					<li>
+						<a href="https://www.flickr.com/photos/125367967@N02/" class="text-dark">Flickr</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/festineuch/" class="text-dark">Instagram</a>
+					</li>
+				</ul>
+			</div>
+			<!--Grid column-->
+
+			<!--Grid column-->
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<p class="text-uppercase mb-0">Staff</p>
+
+				<ul class="list-unstyled">
+					<li>
+						<a href="#!" class="text-dark">mon.festineuch</a>
+					</li>
+					<li>
+						<a href="#!" class="text-dark">recrutement</a>
+					</li>
+					<p class="text-uppercase mb-0">Médias</p>
+					<li>
+						<a href="#!" class="text-dark">accès presse</a>
+					</li>
+					<li>
+						<a href="#!" class="text-dark">accréditation</a>
+					</li>
+				</ul>
+			</div>
+			<!--Grid column-->
+		</div>
+		<!--Grid row-->
+	</div>
+	<!-- Grid container -->
+
+	<!-- Copyright -->
+	<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+		© 2020 Copyright:
+		<a class="text-dark" href="#!">Lucas Tripod</a>
+	</div>
+	<!-- Copyright -->
+</footer>
+<!-- Footer -->
+
 </html>

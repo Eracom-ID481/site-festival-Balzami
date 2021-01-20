@@ -1,0 +1,484 @@
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-image: url('img/public.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+/* MENU BURGER */
+/* https://codepen.io/plavookac/pen/qomrMw */
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #282d70;
+    position: fixed;
+    height: 60px !important;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.mainInner {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.mainInner div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, #282d70 0%, #4952cc 100%);
+}
+
+@media only screen and (max-width: 1200px) {
+    #sidebarMenu {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox]#openSidebarMenu {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/* MENU BURGER */
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+/*TEST JS*/
+.wrap-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141966;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #141966;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.wrap-button:hover {
+    background-color: #141966;
+    color: white;
+}
+
+.wrap .box-hidden {
+    display: none;
+}
+
+/*TEST JS/*
+
+/*HEADER*/
+.title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 60%;
+    margin: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 1%;
+    padding: 1%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    text-transform: uppercase;
+}
+
+.grid-container .day {
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #282d70;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.grid-container .artist {
+    background-color: #373d99;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 2px;
+}
+
+/*ajouter off à artist pour griser les journées déjà effectué. Compléter en remplacant les balises h1 à h5 par la h6*/
+.grid-container .artistoff {
+    background-color: #36384d;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 2px;
+}
+
+@media only screen and (min-width: 700px) {
+    .grid-container {
+        width: 70%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .grid-container {
+        width: 70%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+h1 {
+    border: 2px solid #ff4def;
+    border-radius: 4px;
+    padding: 2px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: auto;
+    margin-bottom: 6px;
+}
+
+h2 {
+    border: 2px solid #4dff63;
+    border-radius: 4px;
+    padding: 2px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: auto;
+    margin-bottom: 6px;
+}
+
+h3 {
+    border: 2px solid #ecff4d;
+    border-radius: 4px;
+    padding: 2px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: auto;
+    margin-bottom: 6px;
+}
+
+h4 {
+    border: 2px solid #4df2ff;
+    border-radius: 4px;
+    padding: 2px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: auto;
+    margin-bottom: 6px;
+}
+
+h5 {
+    border: 2px solid #ff694d;
+    border-radius: 4px;
+    padding: 2px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: auto;
+    margin-bottom: 6px;
+}
+
+/*balise h6 pour griser les journées déjà effectué. Voir aussi artistoff*/
+h6 {
+    border: 2px solid #282d70;
+    border-radius: 4px;
+    padding: 2px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    color: #666880;
+    font-weight: lighter;
+    margin: auto;
+    margin-bottom: 6px;
+}
+
+#hh {
+    padding: 2px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bolder;
+    margin: auto;
+    margin-bottom: 6px;
+}
+
+#dd {
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+/*INDEX*/
+/*TICKET*/
+.entry {
+    padding-top: 100px;
+}
+
+form {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #141966;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6px;
+}
+
+@media only screen and (min-width: 800px) {
+    form {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    form {
+        width: 50%;
+    }
+}
+
+.secondary-color {
+    background-color: #191f80;
+}
+
+hr.rounded {
+    border-top: 8px solid #0f134d;
+    border-radius: 5px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141966;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #141966;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.button:hover {
+    background-color: #141966;
+    color: white;
+}
+
+/*TICKET*/
+/*MAP*/
+.bck-map {
+    margin-top: 60%;
+    padding-top: 60px;
+    text-align: center;
+    background-color: #0f134d;
+    padding-bottom: 60px;
+}
+
+.map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .bck-map {
+        margin-top: 10%;
+    }
+
+    .map {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .bck-map {
+        margin-top: 6%;
+    }
+
+    .map {
+        width: 60%;
+    }
+}
+
+/*MAP*/
+footer {
+    margin-top: 60px;
+}
+
+@media only screen and (min-width: 800px) {
+    footer {
+        margin-top: 120px;
+    }
+}
